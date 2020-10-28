@@ -2,7 +2,8 @@
 OpenShift basic operator written in Go, which deploys a deployment, a service and a route.
 
 # What does this operator do?
-OpenShift basic operator written in Go, which deploys a deployment with [Size] replicas of a specified [Image], a service and a route. 
+This is an example operator, which deploys [db_size] replicas of mongo and [web_size] replicas of
+mongo express. 
 This operator has been tested on openshift v4.4.
 
 # Requirements

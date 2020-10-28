@@ -1,5 +1,4 @@
-# Go HelloWorld Operator
-
+# Mongo & MongoWeb Operator in go
 OpenShift basic operator written in Go, which deploys a deployment, a service and a route.
 
 # What does this operator do?
@@ -17,14 +16,14 @@ This operator has been tested on openshift v4.4.
 # How was the project initialized
 - `mkdir operator_name`
 - `cd operator_name`
-- `operator-sdk init --domain=example.com --repo=github.com/example-inc/hw-operator` 
-- `operator-sdk create api --group cache --version v1alpha1 --kind HelloWorld`
+- `operator-sdk init --domain=ocp4.example --repo=gitlab.com/openshift4ee/go-operator-example` 
+- `operator-sdk create api --group ocp4ee --version v1alpha1 --kind GoMongo`
 
 # Defining your CRD
 Edit the `api/v1alpha1/CRDNAME_types.go` file, and add the desired fields in _CRDNAME_ Spec. Afterwards, execute `make generate`.
 
 # Updating your manifests
-In order to update the project manifests, for example after changing your rbac permissions in helloworld_controller.go, execute `make manifests`.
+In order to update the project manifests, for example after changing your rbac permissions in gomongo_controller.go, execute `make manifests`.
 (For more information consult the following tutorial - https://sdk.operatorframework.io/docs/building-operators/golang/tutorial/ )
 
 # How to build and push the operator image
@@ -39,5 +38,5 @@ In order to update the project manifests, for example after changing your rbac p
 The first command sets the namespace in which the operator shall be deployed. The second registers the CRD in the cluster, and the third deploys the actual operator.
 
 # How to deploy sample operator custom resource
-- `oc apply -f config/samples/hw_v1alpha1_helloworld.yaml`
+- `oc apply -f config/samples/ocp4ee_v1_gomongo.yaml`
 

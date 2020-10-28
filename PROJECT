@@ -1,0 +1,11 @@
+domain: ocp4.example
+layout: go.kubebuilder.io/v2
+projectName: go-mongo-operator
+repo: gitlab.com/ofekgit/go-operator-example
+resources:
+- group: ocp4ee
+  kind: GoMongo
+  version: v1
+version: 3-alpha
+plugins:
+  go.sdk.operatorframework.io/v2-alpha: {}

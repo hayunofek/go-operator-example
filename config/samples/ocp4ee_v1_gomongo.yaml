@@ -1,0 +1,7 @@
+apiVersion: ocp4ee.ocp4.example/v1
+kind: GoMongo
+metadata:
+  name: gomongo-sample
+spec:
+  # Add fields here
+  foo: bar
